@@ -1,0 +1,11 @@
+# Dependencies
+#
+# List every project dependency and where it comes from.
+#
+# Format:
+# name | purpose | source | version/commit | location
+#
+# Example:
+# SomeLibrary | JSON parsing | https://example.com/repo.git | v1.2.3 | extern/SomeLibrary
+
+None.

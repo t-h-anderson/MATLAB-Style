@@ -1,0 +1,32 @@
+# Generated project outputs
+artefacts/
+html/
+reports/
+coverage/
+
+# MATLAB autosave and backup files
+*.asv
+*.m~
+*.autosave
+
+# MATLAB and Simulink generated caches
+slprj/
+sccprj/
+codegen/
+*.slxc
+
+# MEX and compiled binaries
+*.mex*
+*.dll
+*.dylib
+*.so
+*.exe
+
+# Local environment files
+.env
+*.log
+
+# Operating system noise
+.DS_Store
+Thumbs.db
+desktop.ini
