@@ -13,7 +13,7 @@ Simulink-supporting MATLAB code.
   only when the project minimum MATLAB release supports them or when the project provides a local fallback.
 - Do not depend on Java. MathWorks is removing Java from MATLAB, so code that calls Java classes or relies on the JVM
   will break in future releases and already fails in JVM-free environments such as `-nojvm` sessions.
-  Use native MATLAB equivalents, for example `dictionary` or `containers.Map` instead of `java.util.HashMap`,
+  Use native MATLAB equivalents, for example `dictionary` instead of `java.util.HashMap`,
   `string` functions instead of `java.lang.String`, `uifigure` components instead of `javacomponent` or Swing, and
   `matlab.net.http` instead of `java.net`.
 
