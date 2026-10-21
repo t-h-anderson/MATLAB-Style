@@ -11,6 +11,11 @@ Simulink-supporting MATLAB code.
   project docs.
 - Use release-specific features deliberately. For example, use `matlab.lang.WeakReference`, `dictionary`, or `isapprox`
   only when the project minimum MATLAB release supports them or when the project provides a local fallback.
+- Do not depend on Java. MathWorks is removing Java from MATLAB, so code that calls Java classes or relies on the JVM
+  will break in future releases and already fails in JVM-free environments such as `-nojvm` sessions.
+  Use native MATLAB equivalents, for example `dictionary` or `containers.Map` instead of `java.util.HashMap`,
+  `string` functions instead of `java.lang.String`, `uifigure` components instead of `javacomponent` or Swing, and
+  `matlab.net.http` instead of `java.net`.
 
 ## Naming
 
@@ -232,3 +237,5 @@ across the file unless there is a clear readability reason.
 - `varargin` or `varargout` to fake name-value arguments. Use a proper `arguments` block.
 - Command-form syntax, such as `load foo.mat` or `clear x`, inside functions or methods. Use functional form only.
 - `addpath` or `rmpath` inside functions without resetting on exit. Use `onCleanup`.
+- Java dependencies, including `java.*` and `javax.*` calls, `javaObject`, `javaMethod`, `javaaddpath`, `javacomponent`,
+  `JavaFrame`, and `usejava`-gated code paths. See [Compatibility](#compatibility).
